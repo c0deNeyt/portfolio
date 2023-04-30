@@ -15,6 +15,7 @@
     --text: #3282B8; /* Blue */
     --shadow2:-13px 0px 20rem white; /* Pink */
     --shadow: 0 0 1em rgba(0,0,0, .25);
+    --pf-shadow: 0px 0px 89px -44px rgba(214, 214, 214, 0.75);
 
  }
 /*===========================
@@ -45,13 +46,17 @@
 /*===========================
    MAIN DIVISION STARTS HERE
 =============================*/
+body{
+    background: rgb(0,27,55);
+    background: radial-gradient(circle, rgba(0,27,55,1) 39%, rgba(0,0,0,1) 100%);
+}
 div.main {
-    width: 97rem;
     height: 100vh;
     background-color: var(--primary-clr);
     margin: 0 auto auto;
     box-shadow: var(--shadow);
     background: url(../image/code.jpeg) 0 0 / 100%;
+    opacity: 0.1;
     background-position: cover;
     background-repeat: no-repeat;
 }
@@ -74,13 +79,13 @@ div.main {
            color: black;
         }
     div.main a.profilePic {
-        background: url(../image/pf.jpg) -45px -52px / 23rem 23rem;
-        margin: 3rem auto 0 auto;
+        background: url(../image/pf.jpg) -24px -47px / 23rem 23rem;
+        margin: 7rem auto 0 auto;
         display: block;
         border-radius: 100%;
-        width: 17rem;
-        height: 17rem;
-        /* box-shadow: var(--shadow2); */
+        width: 20rem;
+        height: 20rem;
+        box-shadow: var(--pf-shadow);
     }
     div.main h1 {
         color: var(--color-white);
@@ -98,9 +103,9 @@ div.main {
 div.about{
     width: 97rem;
     height: 100vh;
-    background-color: var(--grad-clr);
+    /* background-color: var(--grad-clr); */
     margin: 0 auto;
-    box-shadow: var(--shadow);
+    /* box-shadow: var(--shadow); */
 }
     div.about h2 {
         font-size: 3.8rem;
@@ -143,31 +148,38 @@ div.about{
             padding: 2rem;
             text-align: justify;
         }
-
-
-    /*===========================
-      HEADER STARTS HERE
-    =============================*/
-
 /*===========================
       MEDIA QUERIES
 =============================*/
 /* MOBILE */
 @media screen and (max-width: 30em){
-    .sm-1{ width: 100%;}
-    .md-1{ width: 50%;}
-    .lg-1{ width: 25%;}
+
 }
 /* TABLET */
-@media screen and (min-width: 30.0625em){
-	.sm-2{ width: 100%;}
-    .md-2{ width: 50%;}
-    .lg-2{ width: 25%;}
-
+@media screen and (min-width: 30.0625em) and (max-width: 63.938rem){
+/* div.main { */
+/* } */
+    /* div.main img { */
+    /*     width: 4.438rem; */
+    /* } */
+    /* div.main nav { */
+    /* } */
+    /*     div.main a { */
+    /*         padding: 0 0.5rem; */
+    /*         font-size: 17px; */
+    /*     } */
+    /*     div.main a:hover { */
+    /*     } */
+    /* div.main a.profilePic { */
+    /*     background: url(../image/pf.jpg) -8px -160px / 9rem 9rem; */
+    /*     margin: 3rem auto 0 auto; */
+    /*     display: block; */
+    /*     border-radius: 100%; */
+    /*     width: 8rem; */
+    /*     height: 8rem; */
+    /*     /* box-shadow: var(--shadow2); */ */
+    /* } */
 }
 /* DESKTOP */
 @media screen and (min-width: 64em){
-	.sm-3{ width: 100%;}
-    .md-3{ width: 50%;}
-    .lg-3{ width: 25%;}
 }
