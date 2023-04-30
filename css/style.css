@@ -1,299 +1,173 @@
-/****************************
-        RESSETER 
-*****************************/
+/*===========================
+    MY PRESETS
+=============================*/
+:root{
+    --ff: "Nunito", Arial, Helvetica, sans-serif;
+    --ff-1: "sourceSans", Arial, Helvetica, sans-serif;
+    --ff-2: "breeSerif", Arial, Helvetica, sans-serif;
+    --s1: 0.063rem;
+    --s30: 1.875rem;
+    --primary-clr: #1B262C;
+    --secondary-clr: #0F4C75;
+    --grad-clr: #3282B8;
+    --grad1-clr: #BBE1FA;
+    --color-white: rgb(255, 255, 255);
+    --text: #3282B8; /* Blue */
+    --shadow2:-13px 0px 20rem white; /* Pink */
+    --shadow: 0 0 1em rgba(0,0,0, .25);
+
+ }
+/*===========================
+    IMPORTED FONTS
+=============================*/
+@font-face {
+    font-family: "Nunito";
+    src: url("../font/Nunito/Nunito-VariableFont_wght.ttf");
+}
+@font-face {
+    font-family: "sourceSans";
+    src: url("../font/Source_Sans_Pro/SourceSansPro-Regular.ttf");
+}
+@font-face {
+    font-family: "breeSerif";
+    src: url("../font/Source_Sans_Pro/SourceSansPro-Regular.ttf");
+}
+/*===========================
+    BODY WITH RESET
+=============================*/
 *{
-    margin: 0;
+ 	/* outline: 3px solid limegreen !important; */
+    /* background: rgb(0 100 0 /0.1) !important; */
     padding: 0;
+    margin: 0;
+    font-family: var(--ff);
 }
-
-/****************************
-    DIRECT TAG SELECTORS 
-*****************************/
-
-/* body *{
-    outline: double red;
-    font-family: "Comic Sans MS", "Comic Sans", cursive;
-} */
-
-a{
-    color: black;
+/*===========================
+   MAIN DIVISION STARTS HERE
+=============================*/
+div.main {
+    width: 97rem;
+    height: 100vh;
+    background-color: var(--primary-clr);
+    margin: 0 auto auto;
+    box-shadow: var(--shadow);
+    background: url(../image/code.jpeg) 0 0 / 100%;
+    background-position: cover;
+    background-repeat: no-repeat;
 }
-
-/**************************************
-    CONTAINER/WRAPPER (wrapping baby)
-***************************************/
-.container{
-    margin: 20px 10px 10px 10px;
-    width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #f8f8f8;
-    display: block;
-}
-/****************************
-        HEADER 
-*****************************/
-.header h1{
-    display: inline-block;
-    font-family: "Comic Sans MS", "Comic Sans", cursive;
-}
-.header h3{
-    display: inline-block;
-    margin:  0px 0px 0px 55%;
-    padding: 0px 0px 10px 0px;
-}
-
-/**************************************************
-        CONTENT (marunong makuntento sa isa haha)
-***************************************************/
-.content{
-    background-image: linear-gradient(
-    to right bottom, #1f1c1e, #2c272a,
-     #3b3237, #4a3d44, #594952,
-      #594952, #594952, #594952,
-       #4a3d44, #3b3237, #2c272a,
-        #1f1c1e);
-    width: 1000px;
-    height: 61em;
-}
-    .content .uperleftbox{
-        display: inline;
+    div.main img {
+        width: 10.438rem;
+        margin-top: 0.875rem;
     }
-    div.content .profilePicture{
-        background-color: #c0c0c0;
-        margin: 17px 12px 0px 25px;
-        padding: 8px;
-        height: 285px;
-        width: 453px;
+    div.main nav {
+        float: right;
+        padding: 2.75rem;
     }
-    div.content div.uperrighttbox{
-        background-color: whitesmoke;
-        display: inline-block;
-        vertical-align: bottom;
-        margin: 10px 12px 0px 6px;
-        height: 304px;
-        width: 453px;
-    }
-    div.content .uperrighttbox p.upperRight-tittle{
+        div.main a {
+            padding: 0 3rem;
+            font-size: 32px;
+            text-decoration: none;
+            color: var(--color-white);
+        }
+        div.main a:hover {
+           background-color:var(--grad-clr);
+           color: black;
+        }
+    div.main a.profilePic {
+        background: url(../image/pf.jpg) -45px -52px / 23rem 23rem;
+        margin: 3rem auto 0 auto;
         display: block;
-        height: 33px;
-        color: white;
-        font-size: 27px;
-        font-weight: 100;
-        padding: 13px 6px 6px 6px;
-        background-image: linear-gradient(to bottom,
-        #b7b6b9, #adabb2, #a3a0ab, #9995a5,
-        #8e8b9e, #8e8b9e, #8e8b9e, #8e8b9e,
-        #9995a5, #a3a0ab, #adabb2, #b7b6b9);
+        border-radius: 100%;
+        width: 17rem;
+        height: 17rem;
+        /* box-shadow: var(--shadow2); */
     }
-
-    div.content .uperrighttbox p{
-        height: 68px;
-        display: inline-block;
-        font-size: 17px;
-        font-weight: 100;
-        padding: 13px 17px 0px 9px;
+    div.main h1 {
+        color: var(--color-white);
+        text-align: center;
+        font-weight: bold;
+        font-size: 4rem;
+        padding-top: 2rem;
     }
-
-/*******************************
-    TITTLES OR SUB-HEADERS
-*******************************/
-.tittle{
-    display: block;
-    height: 28px;
-    color: white;
-    font-size: 27px;
-    font-weight: 100;
-    padding: 7px 6px 9px 6px;
-    background-image: linear-gradient(to bottom,
-    #b7b6b9, #adabb2, #a3a0ab, #9995a5,
-    #8e8b9e, #8e8b9e, #8e8b9e, #8e8b9e,
-    #9995a5, #a3a0ab, #adabb2, #b7b6b9);
-
+    div.main p {
+        font-size:var(--s30);
+        color: #ffffffad;
+        font-family: monospace;
+        text-align: center;
+    }
+div.about{
+    width: 97rem;
+    height: 100vh;
+    background-color: var(--grad-clr);
+    margin: 0 auto;
+    box-shadow: var(--shadow);
 }
-.secondTittle{
-    display: block;
-    color: white;
-    font-size: 27px;
-    font-weight: 100;
-    margin: 20px 0px 0px 0px;
-    padding: 7px 0px 5px 0px;
-    background-image: linear-gradient(to bottom,
-    #b7b6b9, #adabb2, #a3a0ab, #9995a5,
-    #8e8b9e, #8e8b9e, #8e8b9e, #8e8b9e,
-    #9995a5, #a3a0ab, #adabb2, #b7b6b9);
-
-}
-
-
-.row{
-    display: inline;
-    width: 100%;
-}
-.col-1 span{
-    margin: -10px 0px -10px 0px;
-
-}
-
-/*************************
-    BUTTON STYLES
-**************************/
-.col-1 .greenbtn{
-    box-shadow: 4px 4px #0000007d;
-    width: 52px;
-    height: 10px;
-    font-size: 11px;
-    color: white;
-    background-color: #407d61;
-    border: 0.05em solid black;
-    border-radius: 0.6em;
-    padding: 5px 4px 7px 5px;
-    margin: 1em 0em 0em 11em;
-
-}
-.col-2 .greenbtn{
-    box-shadow: 4px 4px #0000007d;
-    width: 106px;
-    height: 10px;
-    font-size: 11px;
-    color: white;
-    background-color: #407d61;
-    border: 0.05em solid black;
-    border-radius: 0.6em;
-    padding: 5px 4px 7px 5px;
-    margin: 1em 0em 0em 8em;
-
-}
-.col-3 .greenbtn{
-    box-shadow: 4px 4px #0000007d;
-    width: 75px;
-    height: 10px;
-    font-size: 11px;
-    color: white;
-    background-color: #407d61;
-    border: 0.05em solid black;
-    border-radius: 0.6em;
-    padding: 5px 4px 7px 5px;
-    margin: 1em 0em 0em 10em;
-
-}
-    .greenbtn a{
-        color: white;
+    div.about h2 {
+        font-size: 3.8rem;
+        color: var(--color-white);
+        padding: 45px 0 0 0;
+        text-align: center;
         font-weight: 600;
-        text-decoration: none;
     }
-
-/*************************
-     STYLES FOR LA MODE
-**************************/
-    .col-1{
-        background-image: linear-gradient(to right,
-        #fefeff, #eeeef3, #dfdee8, #d0cfdc,
-        #c1bfd1);
-        display: inline-block;
-        margin: 24px 10px 0px 24px;
-        width: 30%;
-        height: 36em;
+    div.about p.subhead {
+        display: block;
+        font-size:var(--s30);
+        color: #ffffffb4;
+        font-family: monospace;
+        text-align: center;
+        line-height: 13px;
+        margin: 0 auto;
     }
-        .content .col-1 span img{
-            margin: 0px;
-            width: 100%;
-            height: 145px;
-        }
-        .col-1 p {
-            margin: 6px 14px 86px 11px;
-            text-align: justify;
-            font-size: 15px;
-        }
-        .row .col-1 img{
-            width: 40px;
-            height: 40px;
-            margin: 8px;
-        }
-/*********************************
-     STYLES FOR FAMILY CONTACTS
-*********************************/        
-    .col-2{
-        background-image: linear-gradient(to right,
-        #fefeff, #eeeef3, #dfdee8, #d0cfdc, #c1bfd1);
-        display: inline-block;
-        margin: 24px 10px 0px 10px;
-        width: 30%;
-        height: 36em;
-    }
-        .content .col-2 span img{
-            margin: 0px;
-            width: 100%;
-            height: 145px;
-        }
-        .col-2 p {
-            margin: 6px 14px 53px 11px;
-            text-align: justify;
-            font-size: 15px;
-        }
-
-        .row .col-2 img{
-            width: 40px;
-            height: 40px;
-            margin: 8px;
-            
-        }
-/*************************
-     STYLES FOR LA MODE
-**************************/       
-    .col-3{
-        background-image: linear-gradient(to right,
-        #fefeff, #eeeef3, #dfdee8, #d0cfdc, #c1bfd1);
-        display: inline-block;
-        margin: 24px 24px 0px 10px;
-        width: 30%;
-        height: 36em;
-    }
-        .content .col-3 span img{
-            margin: 0px;
-            width: 100%;
-            height: 145px;
-        }
-        .col-3 p {
-            margin: 6px 14px 18px 11px;
-            text-align: justify;
-            font-size: 15px;
-        }
-
-        .row .col-3 img{
-            width: 40px;
-            height: 40px;
-            margin: 8px;
-            
-        }
-/****************************
-        FOORTER 
-*****************************/
-.footer{
-    margin: 0.8em 0em 0em 0em;
-    display: block;
-}
-    .footer p{
-        font-size: 20px;
-        margin-left: 17em;
-        margin-right: 17em;
-    }
-
-
-    div.footer div.ft-row{
-        margin-left: 17em;
-    }
-        div.footer .ft-row img{
+        div.about p span {
             display: inline-block;
-            vertical-align: bottom;
-            padding: 10px 0px 0px 0px;
-            width: 2em;
-            height: 2em;
+            background-color: black;
+            min-width: 4rem;
+            min-height: 6px;
+            vertical-align: middle;
         }
-    div.footer .ft-row .ft-col{
-        display: inline-block;
-        margin: 3px;
-        margin-bottom: 7px;
+    div.about div.aboutContent {
+        padding: 2rem;
     }
+        div.about img {
+            display: inline-block;
+            vertical-align: middle;
+            width: 32rem;
+            padding: 0 4rem 0 4rem;
+        }
+        div.about p {
+            color: #ffffff;
+            display: inline-block;
+            width: 47ch;
+            vertical-align: top;
+            font-size: var(--s30);
+            padding: 2rem;
+            text-align: justify;
+        }
 
-        
+
+    /*===========================
+      HEADER STARTS HERE
+    =============================*/
+
+/*===========================
+      MEDIA QUERIES
+=============================*/
+/* MOBILE */
+@media screen and (max-width: 30em){
+    .sm-1{ width: 100%;}
+    .md-1{ width: 50%;}
+    .lg-1{ width: 25%;}
+}
+/* TABLET */
+@media screen and (min-width: 30.0625em){
+	.sm-2{ width: 100%;}
+    .md-2{ width: 50%;}
+    .lg-2{ width: 25%;}
+
+}
+/* DESKTOP */
+@media screen and (min-width: 64em){
+	.sm-3{ width: 100%;}
+    .md-3{ width: 50%;}
+    .lg-3{ width: 25%;}
+}
