@@ -5,8 +5,8 @@
     --ff: "Nunito", Arial, Helvetica, sans-serif;
     --ff-1: "sourceSans", Arial, Helvetica, sans-serif;
     --ff-2: "breeSerif", Arial, Helvetica, sans-serif;
-    --s1: 0.063rem;
-    --s30: 1.875rem;
+    --heading: 1.875rem; /* 30px  */
+    --subtitle: 1.25rem; /* 20px  */
     --primary-clr: #1B262C;
     --secondary-clr: #0F4C75;
     --grad-clr: #3282B8;
@@ -51,13 +51,15 @@ body{
     background: radial-gradient(circle, rgba(0,27,55,1) 39%, rgba(0,0,0,1) 100%);
 }
 div.main {
+    width: 100vw;
     height: 100vh;
     background-color: var(--primary-clr);
     margin: 0 auto auto;
     box-shadow: var(--shadow);
     background: url(../image/code.jpeg) 0 0 / 100%;
     opacity: 0.1;
-    background-position: cover;
+    background-position: center center;
+    background-size: cover;
     background-repeat: no-repeat;
 }
     div.main img {
@@ -78,6 +80,9 @@ div.main {
            background-color:var(--grad-clr);
            color: black;
         }
+        div.main button{
+            display: none;
+        }
     div.main a.profilePic {
         background: url(../image/pf.jpg) -24px -47px / 23rem 23rem;
         margin: 7rem auto 0 auto;
@@ -95,7 +100,7 @@ div.main {
         padding-top: 2rem;
     }
     div.main p {
-        font-size:var(--s30);
+        font-size: var(--heading);
         color: #ffffffad;
         font-family: monospace;
         text-align: center;
@@ -116,7 +121,7 @@ div.about{
     }
     div.about p.subhead {
         display: block;
-        font-size:var(--s30);
+        font-size: var(--heading);
         color: #ffffffb4;
         font-family: monospace;
         text-align: center;
@@ -144,7 +149,7 @@ div.about{
             display: inline-block;
             width: 47ch;
             vertical-align: top;
-            font-size: var(--s30);
+            font-size: var(--heading);
             padding: 2rem;
             text-align: justify;
         }
@@ -153,7 +158,35 @@ div.about{
 =============================*/
 /* MOBILE */
 @media screen and (max-width: 30em){
-
+    div.main img {
+        width: 5rem;
+    }
+    div.main nav {
+        padding: 2rem;
+    }
+        div.main a {
+            padding: 0 0.4rem;
+            font-size: 14px;
+        }
+        div.main button{
+            display: inline-block;
+            border-radius: 0.2rem;
+            background: transparent;
+            border: 0.063rem solid;
+        }
+    div.main a.profilePic {
+        background: url(../image/pf.jpg) -26px -24px / 13rem 13rem;
+        margin: 6rem auto 0 auto;
+        width: 10rem;
+        height: 10rem;
+    }
+    div.main h1{
+        font-size: var(--heading);
+        padding-top: 1rem;
+    } 
+    div.main p {
+        font-size: var(--heading);
+    }
 }
 /* TABLET */
 @media screen and (min-width: 30.0625em) and (max-width: 63.938rem){
