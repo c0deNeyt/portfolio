@@ -81,7 +81,8 @@ div.main {
            color: black;
         }
         div.main button{
-            display: none;
+            --button-color: #fff;
+}           display: none;
         }
     div.main a.profilePic {
         background: url(../image/pf.jpg) -24px -47px / 23rem 23rem;
@@ -185,7 +186,7 @@ div.about{
         padding-top: 1rem;
     } 
     div.main p {
-        font-size: var(--heading);
+        font-size: var(--subtitle);
     }
 }
 /* TABLET */
