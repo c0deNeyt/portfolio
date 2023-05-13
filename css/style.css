@@ -77,11 +77,16 @@ div.main {
             color: var(--color-white);
         }
         div.main a:hover {
-           background-color:var(--grad-clr);
-           color: black;
+            background-color:var(--grad-clr);
+            color: black;
         }
-        div.main button{
-            display: none;
+        button {
+            background: transparent;
+            border: 10px solid var(--button-color, #000);
+            border-radius: 1rem;
+        }
+        .button {
+            --button-color: #fff;
         }
     div.main a.profilePic {
         background: url(../image/pf.jpg) -24px -47px / 23rem 23rem;
