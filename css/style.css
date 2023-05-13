@@ -85,8 +85,9 @@ div.main {
             border: 10px solid var(--button-color, #000);
             border-radius: 1rem;
         }
-        .button {
+        div.main button{
             --button-color: #fff;
+            display: none;
         }
     div.main a.profilePic {
         background: url(../image/pf.jpg) -24px -47px / 23rem 23rem;
@@ -190,7 +191,7 @@ div.about{
         padding-top: 1rem;
     } 
     div.main p {
-        font-size: var(--heading);
+        font-size: var(--subtitle);
     }
 }
 /* TABLET */
