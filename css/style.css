@@ -1,224 +1,292 @@
 /*===========================
     MY PRESETS
 =============================*/
-:root{
-    --ff: "Nunito", Arial, Helvetica, sans-serif;
-    --ff-1: "sourceSans", Arial, Helvetica, sans-serif;
-    --ff-2: "breeSerif", Arial, Helvetica, sans-serif;
-    --heading: 1.875rem; /* 30px  */
-    --subtitle: 1.25rem; /* 20px  */
-    --primary-clr: #1B262C;
-    --secondary-clr: #0F4C75;
-    --grad-clr: #3282B8;
-    --grad1-clr: #BBE1FA;
-    --color-white: rgb(255, 255, 255);
-    --text: #3282B8; /* Blue */
-    --shadow2:-13px 0px 20rem white; /* Pink */
-    --shadow: 0 0 1em rgba(0,0,0, .25);
-    --pf-shadow: 0px 0px 89px -44px rgba(214, 214, 214, 0.75);
-
- }
+:root {
+  --ff: "Nunito", Arial, Helvetica, sans-serif;
+  --ff-1: "sourceSans", Arial, Helvetica, sans-serif;
+  --ff-2: "breeSerif", Arial, Helvetica, sans-serif;
+  --heading: 1.875rem; /* 30px  */
+  --subtitle: 1.25rem; /* 20px  */
+  --primary-clr: #1b262c;
+  --secondary-clr: #0f4c75;
+  --grad-clr: #3282b8;
+  --grad1-clr: #bbe1fa;
+  --color-white: rgb(255, 255, 255);
+  --text: #3282b8; /* Blue */
+  --shadow2: -13px 0px 20rem white; /* Pink */
+  --shadow: 0 0 1em rgba(0, 0, 0, 0.25);
+  --pf-shadow: 0px 0px 89px -44px rgba(214, 214, 214, 0.75);
+}
 /*===========================
     IMPORTED FONTS
 =============================*/
 @font-face {
-    font-family: "Nunito";
-    src: url("../font/Nunito/Nunito-VariableFont_wght.ttf");
+  font-family: "Nunito";
+  src: url("../font/Nunito/Nunito-VariableFont_wght.ttf");
 }
 @font-face {
-    font-family: "sourceSans";
-    src: url("../font/Source_Sans_Pro/SourceSansPro-Regular.ttf");
+  font-family: "sourceSans";
+  src: url("../font/Source_Sans_Pro/SourceSansPro-Regular.ttf");
 }
 @font-face {
-    font-family: "breeSerif";
-    src: url("../font/Source_Sans_Pro/SourceSansPro-Regular.ttf");
+  font-family: "breeSerif";
+  src: url("../font/Source_Sans_Pro/SourceSansPro-Regular.ttf");
 }
 /*===========================
     BODY WITH RESET
 =============================*/
-*{
- 	/* outline: 3px solid limegreen !important; */
-    /* background: rgb(0 100 0 /0.1) !important; */
-    padding: 0;
-    margin: 0;
-    font-family: var(--ff);
+* {
+  /* outline: 1px solid limegreen !important; */
+  /* background: rgb(0 100 0 /0.1) !important; */
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: var(--ff);
 }
 /*===========================
    MAIN DIVISION STARTS HERE
 =============================*/
-body{
-    background: rgb(0,27,55);
-    background: radial-gradient(circle, rgba(0,27,55,1) 39%, rgba(0,0,0,1) 100%);
+body {
+  background: rgb(0, 27, 55);
+  background: radial-gradient(
+    circle,
+    rgba(0, 27, 55, 1) 39%,
+    rgba(0, 0, 0, 1) 100%
+  );
 }
 div.main {
-    width: 100vw;
-    height: 100vh;
-    background-color: var(--primary-clr);
-    margin: 0 auto auto;
-    box-shadow: var(--shadow);
-    background: url(../image/code.jpeg) 0 0 / 100%;
-    opacity: 0.1;
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  /* opacity: 0.1; */
+  background-color: var(--primary-clr);
+  margin: 0 auto auto;
+  box-shadow: var(--shadow);
+  background: url(../image/code.jpeg) 0 0 / 100%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-    div.main img {
-        width: 10.438rem;
-        margin-top: 0.875rem;
-    }
-    div.main nav {
-        float: right;
-        padding: 2.75rem;
-    }
-        div.main a {
-            padding: 0 3rem;
-            font-size: 32px;
-            text-decoration: none;
-            color: var(--color-white);
-        }
-        div.main a:hover {
-            background-color:var(--grad-clr);
-            color: black;
-        }
-        button {
-            background: transparent;
-            border: 10px solid var(--button-color, #000);
-            border-radius: 1rem;
-        }
-        div.main button{
-            --button-color: #fff;
-            display: none;
-        }
-    div.main a.profilePic {
-        background: url(../image/pf.jpg) -24px -47px / 23rem 23rem;
-        margin: 7rem auto 0 auto;
-        display: block;
-        border-radius: 100%;
-        width: 20rem;
-        height: 20rem;
-        box-shadow: var(--pf-shadow);
-    }
-    div.main h1 {
-        color: var(--color-white);
-        text-align: center;
-        font-weight: bold;
-        font-size: 4rem;
-        padding-top: 2rem;
-    }
-    div.main p {
-        font-size: var(--heading);
-        color: #ffffffad;
-        font-family: monospace;
-        text-align: center;
-    }
-div.about{
-    width: 97rem;
-    height: 100vh;
-    /* background-color: var(--grad-clr); */
-    margin: 0 auto;
-    /* box-shadow: var(--shadow); */
+div.main header {
+  width: 100%;
+  display: flex; /* to align element properly */
 }
-    div.about h2 {
-        font-size: 3.8rem;
-        color: var(--color-white);
-        padding: 45px 0 0 0;
-        text-align: center;
-        font-weight: 600;
-    }
-    div.about p.subhead {
-        display: block;
-        font-size: var(--heading);
-        color: #ffffffb4;
-        font-family: monospace;
-        text-align: center;
-        line-height: 13px;
-        margin: 0 auto;
-    }
-        div.about p span {
-            display: inline-block;
-            background-color: black;
-            min-width: 4rem;
-            min-height: 6px;
-            vertical-align: middle;
-        }
-    div.about div.aboutContent {
-        padding: 2rem;
-    }
-        div.about img {
-            display: inline-block;
-            vertical-align: middle;
-            width: 32rem;
-            padding: 0 4rem 0 4rem;
-        }
-        div.about p {
-            color: #ffffff;
-            display: inline-block;
-            width: 47ch;
-            vertical-align: top;
-            font-size: var(--heading);
-            padding: 2rem;
-            text-align: justify;
-        }
+.logo {
+  width: 4rem;
+  padding: 1rem;
+  display: inline-block;
+}
+div.main header nav.menu {
+  height: 2rem;
+  display: inline-block;
+}
+div.main a:hover {
+  background-color: var(--grad-clr);
+  color: black;
+}
+div.main header nav button {
+  background: transparent;
+  border: 10px solid var(--button-color, #000);
+  border-radius: 1rem;
+}
+div.main header nav button.button {
+  --button-color: #fff;
+  padding: 1.5rem 1rem 0 0;
+  width: 100%;
+  text-align: end;
+  display: none;
+}
+div.main header nav button.button svg {
+  width: 2.5rem;
+}
+div.main a.profilePic {
+  background: url(../image/pf.jpg) -24px -47px / 23rem 23rem;
+  margin: 7rem auto 0 auto;
+  display: block;
+  border-radius: 100%;
+  width: 20rem;
+  height: 20rem;
+  box-shadow: var(--pf-shadow);
+}
+div.main h1 {
+  color: var(--color-white);
+  text-align: center;
+  font-weight: bold;
+  font-size: 4rem;
+  padding-top: 2rem;
+}
+div.main p {
+  font-size: var(--heading);
+  color: #ffffffad;
+  font-family: monospace;
+  text-align: center;
+}
+
+/* Styling for the action menu */
+div.main nav.action-menu {
+  display: none; /* Hidden by default */
+  position: absolute;
+  top: 4.438rem;
+  right: 0.875rem;
+  background-color: var(--primary-clr);
+  opacity: 0.85;
+  /* border: 1px solid #ddd; */
+  border-radius: 6px;
+  /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); */
+  box-shadow: var(--shadow);
+  width: 150px;
+  z-index: 1000;
+}
+
+/* Style for list inside the action menu */
+div.main nav.action-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Style for individual menu items */
+/* div.main nav.action-menu li { */
+/*   border-bottom: 1px solid; */
+/* } */
+div.main nav.action-menu li {
+  border-bottom: 1px solid;
+  border-image: linear-gradient(
+    90deg,
+    rgba(18, 189, 11, 1) 0%,
+    rgba(233, 18, 102, 1) 52%,
+    rgba(231, 54, 54, 1) 100%
+  );
+}
+.action-menu li:last-child {
+  border-bottom: none;
+}
+
+/* Style for links */
+.action-menu a {
+  text-decoration: none;
+  color: #ffffff;
+  display: block;
+  padding: 10px 15px;
+  transition: background-color 0.3s;
+}
+
+/* Hover effect */
+.action-menu a:hover {
+  background-color: #f6f8fa;
+}
+
+/* div.main nav.action-menu ul { */
+/*   padding-left: 0; */
+/*   list-style-type: none; */
+/* } */
+/**/
+/* div.about { */
+/*   width: 97rem; */
+/*   height: 100vh; */
+/*   /* background-color: var(--grad-clr); */
+/*   margin: 0 auto; */
+/*   /* box-shadow: var(--shadow); */
+/* } */
+/* div.about h2 { */
+/*   font-size: 3.8rem; */
+/*   color: var(--color-white); */
+/*   padding: 45px 0 0 0; */
+/*   text-align: center; */
+/*   font-weight: 600; */
+/* } */
+/* div.about p.subhead { */
+/*   display: block; */
+/*   font-size: var(--heading); */
+/*   color: #ffffffb4; */
+/*   font-family: monospace; */
+/*   text-align: center; */
+/*   line-height: 13px; */
+/*   margin: 0 auto; */
+/* } */
+/* div.about p span { */
+/*   display: inline-block; */
+/*   background-color: black; */
+/*   min-width: 4rem; */
+/*   min-height: 6px; */
+/*   vertical-align: middle; */
+/* } */
+/* div.about div.aboutContent { */
+/*   padding: 2rem; */
+/* } */
+/* div.about img { */
+/*   display: inline-block; */
+/*   vertical-align: middle; */
+/*   width: 32rem; */
+/*   padding: 0 4rem 0 4rem; */
+/* } */
+/* div.about p { */
+/*   color: #ffffff; */
+/*   display: inline-block; */
+/*   width: 47ch; */
+/*   vertical-align: top; */
+/*   font-size: var(--heading); */
+/*   padding: 2rem; */
+/*   text-align: justify; */
+/* } */
+
 /*===========================
       MEDIA QUERIES
 =============================*/
 /* MOBILE */
-@media screen and (max-width: 30em){
-    div.main img {
-        width: 5rem;
-    }
-    div.main nav {
-        padding: 2rem;
-    }
-        div.main a {
-            padding: 0 0.4rem;
-            font-size: 14px;
-        }
-        div.main button{
-            display: inline-block;
-            border-radius: 0.2rem;
-            background: transparent;
-            border: 0.063rem solid;
-        }
-    div.main a.profilePic {
-        background: url(../image/pf.jpg) -26px -24px / 13rem 13rem;
-        margin: 6rem auto 0 auto;
-        width: 10rem;
-        height: 10rem;
-    }
-    div.main h1{
-        font-size: var(--heading);
-        padding-top: 1rem;
-    } 
-    div.main p {
-        font-size: var(--subtitle);
-    }
+@media only screen and (max-width: 480px) {
+  .sm-1 {
+    width: 25%;
+  }
+  .sm-3 {
+    width: 75%;
+  }
+  .sm-4 {
+    width: 100%;
+  }
+  div.main header nav a {
+    padding: 0 3rem;
+    font-size: 1rem;
+    text-decoration: none;
+    color: var(--color-white);
+    display: none;
+  }
+  div.main header nav button.button {
+    display: inline-block;
+    border-radius: 0.2rem;
+    background: transparent;
+    border: 0.063rem solid;
+  }
+  div.main a.profilePic {
+    background: url(../image/pf.jpg) -24px -32px / 13rem 14rem;
+    margin: 4rem auto 0 auto;
+    width: 10rem;
+    height: 10rem;
+  }
+
+  div.main h1 {
+    font-size: 2.5rem;
+  }
 }
 /* TABLET */
-@media screen and (min-width: 30.0625em) and (max-width: 63.938rem){
-/* div.main { */
-/* } */
-    /* div.main img { */
-    /*     width: 4.438rem; */
-    /* } */
-    /* div.main nav { */
-    /* } */
-    /*     div.main a { */
-    /*         padding: 0 0.5rem; */
-    /*         font-size: 17px; */
-    /*     } */
-    /*     div.main a:hover { */
-    /*     } */
-    /* div.main a.profilePic { */
-    /*     background: url(../image/pf.jpg) -8px -160px / 9rem 9rem; */
-    /*     margin: 3rem auto 0 auto; */
-    /*     display: block; */
-    /*     border-radius: 100%; */
-    /*     width: 8rem; */
-    /*     height: 8rem; */
-    /*     /* box-shadow: var(--shadow2); */ */
-    /* } */
+@media only screen and (min-width: 481px) {
+  .md-2 {
+    width: 100%;
+  }
+  div.main header nav a {
+    display: none;
+  }
 }
 /* DESKTOP */
-@media screen and (min-width: 64em){
+@media only screen and (min-width: 1024px) {
+  .lg-1 {
+    width: 100%;
+  }
+  div.main header nav a {
+    display: none;
+  }
+}
+@media screen and (min-width: 481px) {
+  div.main header nav a {
+    display: none;
+  }
 }

@@ -1,47 +1,101 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-        <meta charset="UTF-8">
-        <title>Neyt Portfolio</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="./image/favicon.png">
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/aos.css">
-        <link rel="stylesheet" href="css/style.css">
-        <script src="js/jquery.min.js" ></script>
-        <script src="js/bootstrap.bundle.min.js" ></script>
-        <script src="js/index.js" defer></script>
-    </head>
-    <body>
-        <div class="main sm-3" data-aos="zoom-out-down">
-            <header>
-                <img src="image/neytLogoWithText.png" alt="Neyt Logo">
-                <nav>
-                    <a href="#">About</a>
-                    <a href="#">Skills</a>
-                    <a href="#">Projects</a>
-                    <button class="button" aria-controls="primary-navigation" aria-expanded="false">
-                        <svg fill="var(--button-color)" class="hamburger" viewBox="0 0 100 100" width="20">
-                            <rect class="line top" width="80" height="10" x="10" y="25" rx="5"></rect>
-                            <rect class="line middle" width="80" height="10" x="10" y="45" rx="5"></rect>
-                            <rect class="line bottom" width="80" height="10" x="10" y="65" rx="5"></rect>
-                        </svg>
-                    </button>
-                </nav>
-            </header>
-            <a class="profilePic" href="#"></a>
-            <h1>I'm Christian Araña</h1>
-            <p class="typing"></p>
-        </div>
-        <div class="about" data-aos="zoom-out-up">
-            <h2>About me</h2>
-            <p class="subhead"><span></span> who i am <span></span></p>
-            <div class="aboutContent">
-                <img src="./image/me.png" alt="Picture of Christian">
-                <p>I am a type of person who is always willing to learn and dedicated to excel on the software development path with hands-on, well-developed skills in web development and server administration for almost a year, and having three years of extensive experience in the IT industry.</p>
-            </div>
-        </div>
-        <script src="js/typed.js@2.0.11"></script>
-        <script src="js/aos.js"></script>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Neyt Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./image/favicon.png" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/aos.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js" defer></script>
+  </head>
+  <body>
+    <div class="main sm-4" data-aos="zoom-out-down">
+      <header>
+        <!-- Logo -->
+        <img
+          class="logo sm-1"
+          src="image/neytLogoWithText.png"
+          alt="Neyt Logo"
+        />
+        <!-- Menu -->
+        <nav class="menu sm-3">
+          <a href="#">About</a>
+          <a href="#">Skills</a>
+          <a href="#">Projects</a>
+          <button
+            id="actionButton"
+            class="button"
+            aria-controls="primary-navigation"
+            aria-expanded="false"
+          >
+            <svg
+              fill="var(--button-color)"
+              class="hamburger"
+              viewBox="0 0 100 100"
+              width="20"
+            >
+              <rect
+                class="line top"
+                width="80"
+                height="10"
+                x="10"
+                y="25"
+                rx="5"
+              ></rect>
+              <rect
+                class="line middle"
+                width="80"
+                height="10"
+                x="10"
+                y="45"
+                rx="5"
+              ></rect>
+              <rect
+                class="line bottom"
+                width="80"
+                height="10"
+                x="10"
+                y="65"
+                rx="5"
+              ></rect>
+            </svg>
+          </button>
+        </nav>
+      </header>
+      <!-- Action Menu -->
+      <nav id="actionMenu" class="action-menu">
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Skills</a></li>
+          <li><a href="#">Projects</a></li>
+        </ul>
+      </nav>
+      <!-- Profile Picture -->
+      <a class="profilePic" href="#"></a>
+      <!-- Capttion -->
+      <h1>I'm Christian Araña</h1>
+      <!-- Description-->
+      <p class="typing"></p>
+    </div>
+    <!-- <div class="about" data-aos="zoom-out-up"> -->
+    <!--   <h2>About me</h2> -->
+    <!--   <p class="subhead"><span></span> who i am <span></span></p> -->
+    <!--   <div class="aboutContent"> -->
+    <!--     <img src="./image/me.png" alt="Picture of Christian" /> -->
+    <!--     <p> -->
+    <!--       I am a type of person who is always willing to learn and dedicated to -->
+    <!--       excel on the software development path with hands-on, well-developed -->
+    <!--       skills in web development and server administration for almost a year, -->
+    <!--       and having three years of extensive experience in the IT industry. -->
+    <!--     </p> -->
+    <!--   </div> -->
+    <!-- </div> -->
+    <script src="js/typed.js@2.0.11"></script>
+    <script src="js/aos.js"></script>
+  </body>
 </html>
