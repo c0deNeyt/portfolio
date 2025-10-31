@@ -1,101 +1,184 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Neyt Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="./image/favicon.png" />
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/aos.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/index.js" defer></script>
-  </head>
-  <body>
-    <div class="main sm-4" data-aos="zoom-out-down">
-      <header>
-        <!-- Logo -->
-        <img
-          class="logo sm-1"
-          src="image/neytLogoWithText.png"
-          alt="Neyt Logo"
-        />
-        <!-- Menu -->
-        <nav class="menu sm-3">
-          <a href="#">About</a>
-          <a href="#">Skills</a>
-          <a href="#">Projects</a>
-          <button
-            id="actionButton"
-            class="button"
-            aria-controls="primary-navigation"
-            aria-expanded="false"
-          >
-            <svg
-              fill="var(--button-color)"
-              class="hamburger"
-              viewBox="0 0 100 100"
-              width="20"
-            >
-              <rect
-                class="line top"
-                width="80"
-                height="10"
-                x="10"
-                y="25"
-                rx="5"
-              ></rect>
-              <rect
-                class="line middle"
-                width="80"
-                height="10"
-                x="10"
-                y="45"
-                rx="5"
-              ></rect>
-              <rect
-                class="line bottom"
-                width="80"
-                height="10"
-                x="10"
-                y="65"
-                rx="5"
-              ></rect>
-            </svg>
-          </button>
-        </nav>
-      </header>
-      <!-- Action Menu -->
-      <nav id="actionMenu" class="action-menu">
-        <ul>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Skills</a></li>
-          <li><a href="#">Projects</a></li>
-        </ul>
-      </nav>
-      <!-- Profile Picture -->
-      <a class="profilePic" href="#"></a>
-      <!-- Capttion -->
-      <h1>I'm Christian Araña</h1>
-      <!-- Description-->
-      <p class="typing"></p>
-    </div>
-    <div class="about" data-aos="zoom-out-up">
-      <h2>About me</h2>
-      <p class="subhead"><span></span> who i am <span></span></p>
-      <div class="aboutContent">
-        <!-- <img src="./image/me.png" alt="Picture of Christian" /> -->
-        <p>
-          I am a type of person who is always willing to learn and dedicated to
-          excel on the software development path with hands-on, well-developed
-          skills in web development and server administration for almost a year,
-          and having three years of extensive experience in the IT industry.
-        </p>
-      <vdiv>
-    </div>
-    <script src="js/typed.js@2.0.11"></script>
-    <script src="js/aos.js"></script>
-  </body>
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Hello I'm Neyt!</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="icon" href="./image/favicon.png" />
+	<link rel="stylesheet" href="css/normalize.css" />
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/aos.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/index.js" defer></script>
+</head>
+
+<body>
+	<header>
+		<!-- Menu -->
+		<nav class="menu">
+			<a class="nav-link active" onclick="showTab('home')">Home</a>
+			<a class="nav-link" onclick="showTab('projects')">Project</a>
+			<a class="contact nav-link" onclick="showTab('contact')">Contact</a>
+		</nav>
+	</header>
+	<!-- Home Tab -->
+	<div id="home" class="main tab-content active" data-aos="zoom-out-down">
+		<div class="terminal term1">
+			<div><span class="terminal-prompt">~$</span><span class="command">cat
+					/home/neyt/details.txt</span>
+			</div>
+			<!-- Profile Picture -->
+			<a class="profilePic" href="#"></a>
+			<!-- Capttion -->
+			<h1>I'm Christian Araña</h1>
+			<!-- Description-->
+			<p class="typing"></p>
+			<div><span class="terminal-prompt">~$</span></div>
+		</div>
+		<div class="terminal">
+			<div><span class="terminal-prompt">~$</span><span class="command">cat about.txt</span>
+			</div>
+			<div class="output">
+				Welcome to my digital space! I'm passionate about open-source software,
+				crafting elegant web experiences, and the art of efficient text editing.
+				Every line of code is a step toward building something meaningful.
+			</div>
+			<div><span class="terminal-prompt">~$</span><span class="cursor"></span></div>
+		</div>
+	</div>
+
+	<!-- Contact Tab -->
+	<div id="projects" class="main tab-content">
+		<h2>~/projects</h2>
+		<div class="terminal">
+			<div class="terminal-body">
+				<div><span class="terminal-prompt">~$</span><span class="command">git log
+						--oneline</span></div>
+				<div class="output">Here are some of my notable projects...</div>
+			</div>
+		</div>
+
+		<div class="project-grid">
+			<div class="project-card">
+				<h3>Custom Vim Configuration</h3>
+				<p>
+					A highly optimized .vimrc with custom plugins, keybindings, and
+					color schemes. Designed for maximum productivity and minimal
+					keystrokes.
+				</p>
+				<div class="project-tags">
+					<span class="tag">Vim</span>
+					<span class="tag">Shell</span>
+					<span class="tag">Productivity</span>
+				</div>
+			</div>
+
+			<div class="project-card">
+				<h3>Linux Automation Scripts</h3>
+				<p>
+					Collection of bash scripts for system automation, backup management,
+					and development environment setup. Makes life easier one script at a time.
+				</p>
+				<div class="project-tags">
+					<span class="tag">Bash</span>
+					<span class="tag">Linux</span>
+					<span class="tag">Automation</span>
+				</div>
+			</div>
+
+			<div class="project-card">
+				<h3>Responsive Web Portfolio</h3>
+				<p>
+					Modern, clean portfolio site built with vanilla JavaScript and CSS.
+					Focus on performance and accessibility without framework bloat.
+				</p>
+				<div class="project-tags">
+					<span class="tag">HTML</span>
+					<span class="tag">CSS</span>
+					<span class="tag">JavaScript</span>
+				</div>
+			</div>
+
+			<div class="project-card">
+				<h3>Terminal-Based Task Manager</h3>
+				<p>
+					A lightweight CLI task manager written in Python. Because sometimes
+					the terminal is all you need to stay organized.
+				</p>
+				<div class="project-tags">
+					<span class="tag">Python</span>
+					<span class="tag">CLI</span>
+					<span class="tag">Tools</span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Contact Tab -->
+	<div id="contact" class="main tab-content">
+		<h2>~/contact</h2>
+		<div class="terminal">
+			<div><span class="terminal-prompt">~$</span><span class="command">cat contact.txt</span>
+			</div>
+			<div class="output">
+				<p>Let's connect! Reach out through any of these channels...</p>
+				<p><span class="contact-label">Email:</span> chanchristianarana@gmail.com</p>
+				<p><span class="contact-label">Linkedin:</span> Christian Araña</p>
+				<p><span class="contact-label">Discord:</span> neyt9</p>
+			</div>
+			<div><span class="terminal-prompt">~$</span>
+			</div>
+		</div>
+
+		<div class="terminal" style="margin-top: 3rem;">
+			<div class="terminal-header">
+				<span class="terminal-btn btn-red"></span>
+				<span class="terminal-btn btn-yellow"></span>
+				<span class="terminal-btn btn-green"></span>
+			</div>
+			<div class="terminal-body">
+				<div><span class="terminal-prompt">~$</span><span class="command">echo "Feel free to
+						reach out!"</span></div>
+				<div class="output">I'm always interested in discussing new projects, collaborations, or
+					just chatting about tech.</div>
+				<div><span class="terminal-prompt">~$</span><span class="cursor"></span></div>
+			</div>
+		</div>
+	</div>
+	</div>
+
+
+	<script src="js/typed.js@2.0.11"></script>
+	<script src="js/aos.js"></script>
+	<script>
+		// Tab switching functionality
+		function showTab(tabName) {
+			// Hide all tabs
+			const tabs = document.querySelectorAll('.tab-content');
+			tabs.forEach(tab => {
+				tab.classList.remove('active');
+			});
+
+			// Remove active class from all nav links
+			const navLinks = document.querySelectorAll('.nav-link');
+			navLinks.forEach(link => {
+				link.classList.remove('active');
+			});
+
+			// Show selected tab
+			document.getElementById(tabName).classList.add('active');
+
+			// Add active class to clicked nav link
+			event.target.classList.add('active');
+		}
+	</script>
+</body>
+
+<footer>
+	<p>&copy; 2025 • Built with ❤️ and Vim • Powered by Linux</p>
+</footer>
+
 </html>
