@@ -2,219 +2,249 @@
     MY PRESETS
 =============================*/
 :root {
-  --ff: "robotoMono", monospace, Arial, Helvetica, sans-serif;
-  --ff-1: "Nunito", Arial, Helvetica, sans-serif;
-  --heading: 1.875rem; /* 30px  */
-  --subtitle: 1.25rem; /* 20px  */
-  --content: 1.2rem; /*about.p*/
-  --primary-clr: #1b262c;
-  --secondary-clr: #0f4c75;
+	--ff: "robotoMono", monospace, Arial, Helvetica, sans-serif;
+	--ff-1: "Nunito", Arial, Helvetica, sans-serif;
+	--heading: 1.875rem;
+	/* 30px  */
+	--subtitle: 1.25rem;
+	/* 20px  */
+	--content: 1.2rem;
+	/*about.p*/
+	--primary-clr: #1b262c;
+	--secondary-clr: #0f4c75;
 
-  --line-green: #34D100;
-  --hover-clr: #7f95868a;
-  --bg-clr: #0f0f0f;
-  --prompt-clr: #ff6b6b;
-  --command-clr: #00ff41;
-  --typing-clr: #ffffffad;
-  --heading-clr: #00ff41;
+	--line-green: #34D100;
+	--hover-clr: #7f95868a;
+	--bg-clr: #0f0f0f;
+	--prompt-clr: #ff6b6b;
+	--command-clr: #00ff41;
+	--typing-clr: #ffffff;
+	--heading-clr: #00ff41;
 
-  --color-white: rgb(255, 255, 255);
-  --text: #3282b8; /* Blue */
-  --shadow2: -13px 0px 20rem white; /* Pink */
-  --shadow: 0 0 1em rgba(0, 0, 0, 0.25);
-  --pf-shadow: 0px 0px 89px -44px rgba(214, 214, 214, 0.75);
+	--color-white: rgb(255, 255, 255);
+	--text: #3282b8;
+	/* Blue */
+	--shadow2: -13px 0px 20rem white;
+	/* Pink */
+	--shadow: 0 0 1em rgba(0, 0, 0, 0.25);
+	--pf-shadow: 0px 0px 89px -44px rgba(214, 214, 214, 0.75);
 }
+
 /*===========================
     IMPORTED FONTS
 =============================*/
 @font-face {
-  font-family: "robotoMono";
-  src: url("../font/Roboto_mono/RobotoMono_VariableFont_wght.ttf");
+	font-family: "robotoMono";
+	src: url("../font/Roboto_mono/RobotoMono_VariableFont_wght.ttf");
 }
+
 @font-face {
-  font-family: "Nunito";
-  src: url("../font/Nunito/Nunito-VariableFont_wght.ttf");
+	font-family: "Nunito";
+	src: url("../font/Nunito/Nunito-VariableFont_wght.ttf");
 }
+
 /*===========================
     BODY WITH RESET
 =============================*/
 * {
-  /* outline: 1px solid limegreen !important; */
-  /* background: rgb(0 100 0 /0.1) !important; */
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  font-family: var(--ff);
+	/* outline: 1px solid limegreen !important; */
+	/* background: rgb(0 100 0 /0.1) !important; */
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: var(--ff);
 }
+
 /*===========================
    MAIN DIVISION STARTS HERE
 =============================*/
 body {
 	background: rgb(0, 27, 55);
-	background: radial-gradient(
-	circle,
-	rgba(0, 27, 55, 1) 39%,
-	rgba(0, 0, 0, 1) 100%
-	);
+	background: radial-gradient(circle,
+			rgba(0, 27, 55, 1) 39%,
+			rgba(0, 0, 0, 1) 100%);
 }
-	div.main {
-		position: relative;
-		margin: 0 auto 0 auto;
-		max-width: 50rem;
-	}
-	.terminal {
-		background: rgba(15, 15, 35, 0.8);
-		border: 1px solid var(--line-green);
-		padding: 2rem;
-		margin: 2rem 0;
-		animation: fadeIn 1.5s ease;
-		color: var(--color-white);
+
+div.main {
+	position: relative;
+	margin: 0 auto 0 auto;
+	max-width: 50rem;
+}
+
+.terminal {
+	background: rgba(15, 15, 35, 0.8);
+	border: 1px solid var(--line-green);
+	padding: 2rem;
+	margin: 2rem 0;
+	animation: fadeIn 1.5s ease;
+	color: var(--color-white);
+}
+
+.terminal-header {
+	display: flex;
+	gap: 8px;
+	margin-bottom: 1.5rem;
+}
+
+.terminal-prompt {
+	color: var(--prompt-clr);
+	margin-right: 8px;
+}
+
+.command {
+	color: var(--command-clr);
+}
+
+.cursor {
+	display: inline-block;
+	width: 12px;
+	height: 2rem;
+	background: var(--command-clr);
+	margin: 1rem 0 0 5px;
+	animation: blink 1s infinite;
+}
+
+@keyframes blink {
+
+	0%,
+	50% {
+		opacity: 1;
 	}
 
-	.terminal-header {
-	    display: flex;
-	    gap: 8px;
-	    margin-bottom: 1.5rem;
+	51%,
+	100% {
+		opacity: 0;
 	}
-	.terminal-prompt {
-	    color: var(--prompt-clr);
-	    margin-right: 8px;
-	}
-	.command { 
-		color: var(--command-clr);
-	}
-	.cursor {
-	    display: inline-block;
-	    width: 12px;
-	    height: 2rem;
-	    background: var(--command-clr);
-	    margin: 1rem 0 0 5px;
-	    animation: blink 1s infinite;
-	}
-	@keyframes blink {
-	    0%, 50% { opacity: 1; }
-	    51%, 100% { opacity: 0; }
-	}
+}
 
-	.tab-content {
-	    display: none;
-	    animation: fadeIn 0.5s ease;
-	}
+.tab-content {
+	display: none;
+	animation: fadeIn 0.5s ease;
+}
 
-	.tab-content.active {
-	    display: block;
-	}
+.tab-content.active {
+	display: block;
+}
 
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0;
-        }
+.project-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 2rem;
+	margin: 2rem 0;
+}
 
-        .project-card {
-            background: rgba(26, 26, 46, 0.6);
-            border: 1px solid #00ff41;
-            border-radius: 8px;
-            padding: 2rem;
-            transition: all 0.3s ease;
-        }
+.project-card {
+	background: rgba(26, 26, 46, 0.6);
+	border: 1px solid #00ff41;
+	border-radius: 8px;
+	padding: 2rem;
+	transition: all 0.3s ease;
+}
 
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 40px rgba(0, 255, 65, 0.4);
-        }
+.project-card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 10px 40px rgba(0, 255, 65, 0.4);
+}
 
-        .project-card h3 {
-            color: #00ff41;
-            margin-bottom: 1rem;
-        }
+.project-card h3 {
+	color: #00ff41;
+	margin-bottom: 1rem;
+}
 
-        .project-card p {
-            color: #aaa;
-            line-height: 1.6;
-            margin-bottom: 1rem;
-        }
+.project-card p {
+	color: #aaa;
+	line-height: 1.6;
+	margin-bottom: 1rem;
+}
 
-        .project-tags {
-            margin-top: 1rem;
-        }
+.project-tags {
+	margin-top: 1rem;
+}
 
-        .tag {
-            display: inline-block;
-            background: rgba(0, 255, 65, 0.2);
-            color: #00ff41;
-            padding: 0.3rem 0.8rem;
-            border-radius: 4px;
-            font-size: 0.85rem;
-            margin-right: 0.5rem;
-            margin-top: 0.5rem;
-        }
-	.contact-label {
-		color: var(--prompt-clr);
-	}
+.tag {
+	display: inline-block;
+	background: rgba(0, 255, 65, 0.2);
+	color: #00ff41;
+	padding: 0.3rem 0.8rem;
+	border-radius: 4px;
+	font-size: 0.85rem;
+	margin-right: 0.5rem;
+	margin-top: 0.5rem;
+}
+
+.contact-label {
+	color: var(--prompt-clr);
+}
 
 h2 {
 	font-size: 2rem;
 	color: #00ff41;
 	margin: 1rem 0 1rem 0;
- 	text-shadow: 0 0 10px #00ff41;
+	text-shadow: 0 0 10px #00ff41;
 	text-align: center
 }
 
-	header {
-		text-align: left;
-		border-bottom: 1px solid var(--line-green);
-		position: relative;
-		margin: 0 auto 0 auto;
-		max-width: 50rem;
-	}
-		header nav.menu {
-			padding-top: 1rem;
-			overflow: hidden;
-		    	color: var(--color-white);
-		}
+header {
+	text-align: left;
+	border-bottom: 1px solid var(--line-green);
+	position: relative;
+	margin: 0 auto 0 auto;
+	max-width: 50rem;
+}
 
-		header nav.menu a {
-			padding: 1rem;
-			text-decoration: none;
-			display: inline-block;
-		}
-				header nav.menu a:hover { 
-					background-color: var(--hover-clr);
-				}
-				header nav.menu a.active { 
-					background-color: var(--hover-clr);
-				}
-				header nav.menu a.contact {
-					float: right;	
-				}
-	div.main a.profilePic {
-		background: url(../image/pf.jpg) 2px 0px / 15rem 15rem;
-		margin: 1rem auto 0 auto;
-		display: block;
-		border-radius: 100%;
-		width: 15rem;
-		height: 15rem;
-		box-shadow: var(--pf-shadow);
-	}
-	div.main h1 {
-		color: var(--color-white);
-		text-align: center;
-		font-weight: bold;
-		font-size: 3rem;
-		padding-top: 2rem;
-	}
-	div.main p.typing {
-		font-size: var(--heading);
-		color: var(--typing-clr); 
-		font-family: monospace;
-		text-align: center;
-		height: 3rem;	
-	}
-	div.main span.typed-cursor {
-		display: none;
-	}
+header nav.menu {
+	padding-top: 1rem;
+	overflow: hidden;
+	color: var(--color-white);
+}
+
+header nav.menu a {
+	padding: 1rem;
+	text-decoration: none;
+	display: inline-block;
+}
+
+header nav.menu a:hover {
+	background-color: var(--hover-clr);
+}
+
+header nav.menu a.active {
+	background-color: var(--hover-clr);
+}
+
+header nav.menu a.contact {
+	float: right;
+}
+
+div.main a.profilePic {
+	background: url(../image/pf.jpg) 2px 0px / 15rem 15rem;
+	margin: 1rem auto 0 auto;
+	display: block;
+	border-radius: 100%;
+	width: 15rem;
+	height: 15rem;
+	box-shadow: var(--pf-shadow);
+}
+
+div.main h1 {
+	color: var(--color-white);
+	text-align: center;
+	font-weight: bold;
+	font-size: 3rem;
+	padding-top: 2rem;
+}
+
+div.main p.typing {
+	font-size: var(--heading);
+	color: var(--typing-clr);
+	font-family: monospace;
+	text-align: center;
+	height: 3rem;
+}
+
+div.main span.typed-cursor {
+	display: none;
+}
 
 footer {
 	text-align: center;
@@ -227,12 +257,10 @@ footer {
       MEDIA QUERIES
 =============================*/
 /* MOBILE */
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 480px) {}
 
-}
 /* TABLET */
-@media only screen and (min-width: 481px) {
-}
+@media only screen and (min-width: 481px) {}
+
 /* DESKTOP */
-@media only screen and (min-width: 1024px) {
-}
+@media only screen and (min-width: 1024px) {}
